@@ -7,7 +7,6 @@ from numpy.random import choice
 from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout,
                              QLineEdit, QPushButton, QLabel, QCheckBox,
                              QMessageBox, QTextEdit)
-from PyQt5.QtGui import QIcon
 
 
 class AESCipher:
@@ -28,8 +27,6 @@ class AESCipher:
 class MessageWindow(QWidget):
     def __init__(self):
         super(MessageWindow, self).__init__()
-        self.iconfilepath1 = '/home/justin/Pictures/Icons/quit.png'
-        self.iconfilepath2 = '/home/justin/Python/labplot.png'
         self.left = 300
         self.top = 200
         self.width = 1200
@@ -53,7 +50,6 @@ class MessageWindow(QWidget):
     def initUI(self):
         # Set window title, icon
         self.setWindowTitle('AES Messaging')
-        self.setWindowIcon(QIcon(self.iconfilepath2))
 
         # Set window size and move it on screen
         self.resize(self.width,self.height)
