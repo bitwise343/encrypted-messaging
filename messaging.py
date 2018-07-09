@@ -1,5 +1,4 @@
-# Creates a GUI with a toolbar, menubar, statusbar, central widget
-
+# No comments yet
 import sys
 import base64
 from Crypto.Cipher import AES
@@ -110,45 +109,10 @@ class MessageWindow(QWidget):
 
         self.dec_title_box.addWidget(self.decrypt_title)
         self.dec_box.addWidget(self.decrypt_box)
-        #self.dec_box.addWidget(self.decrypt_button)
 
         self.setLayout(self.window)
         self.show()
 
-        """
-        # Layout boxes
-        self.vbox = QVBoxLayout()
-        self.hbox = QHBoxLayout()
-        self.vbox1 = QVBoxLayout()
-        self.vbox2 = QVBoxLayout()
-        self.box1 = QHBoxLayout()
-        self.box2 = QHBoxLayout()
-        self.box3 = QHBoxLayout()
-        self.box4 = QHBoxLayout()
-
-        # Place widgets in layout boxes and space them out
-        self.vbox.addLayout(self.box1)
-        self.box1.addWidget(self.encrypt_title)
-        self.box1.addWidget(self.encrypt_box)
-        self.box1.addWidget(self.encrypt_button)
-
-        self.vbox.addLayout(self.box2)
-        self.box2.addWidget(self.encrypted_title)
-        self.box2.addWidget(self.encrypted_box)
-
-        self.vbox.addLayout(self.box3)
-        self.box3.addWidget(self.decrypt_title)
-        self.box3.addWidget(self.decrypt_box)
-        self.box3.addWidget(self.decrypt_button)
-
-        self.vbox.addLayout(self.box4)
-        self.box4.addWidget(self.decrypted_title)
-        self.box4.addWidget(self.decrypted_box)
-
-        # Set it all and show it
-        self.setLayout(self.vbox)
-        self.show()
-        """
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = MessageWindow()
