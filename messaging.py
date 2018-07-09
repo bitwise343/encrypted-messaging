@@ -13,10 +13,10 @@ class AESCipher:
     def __init__(self, key):
         self.key = key
 
-    def encrypt(self, raw):
+    def encrypt(self, msg):
         iv = Random.new().read(AES.block_size)
         cipher = AES.new(self.key, AES.MODE_CFB, iv)
-        return base64.b64encode(iv + cipher.encrypt(raw))
+        return base64.b64encode(iv + cipher.encrypt(msg))
 
     def decrypt(self, msg):
         msg = base64.b64decode(msg)
